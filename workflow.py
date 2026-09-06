@@ -8,7 +8,7 @@ import prompts
 class StudyPackOrchestrator:
     def __init__(self, api_key: str):
         self.client = genai.Client(api_key=api_key)
-        self.model = gemini-omni-1.1-flash'
+        self.model = 'gemini-2.5-flash'
     def run_stage_planning(self, notes: str) -> ExecutionPlan:
         prompt = prompts.PLANNING_PROMPT_TEMPLATE.format(notes=notes)
         res = self.client.models.generate_content(
